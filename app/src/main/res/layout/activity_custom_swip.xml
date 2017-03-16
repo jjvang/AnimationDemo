@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="4dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/swip_image_view" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/imageCount"
-        android:text="Hellow"
+        android:id="@+id/hmong"
+        android:text="HMONG TEXT"
         android:gravity="center"
         android:textStyle="bold"
-        android:textSize="15sp"/>
-    <ImageView
+        android:textSize="30sp"/>
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/swip_image_view"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/english"
+        android:text="ENGLISH TEXT"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
 </LinearLayout>
