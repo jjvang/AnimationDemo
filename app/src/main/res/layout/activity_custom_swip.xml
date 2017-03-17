@@ -8,13 +8,14 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:src="@drawable/capture1"
         android:id="@+id/swip_image_view" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/hmong"
-        android:text="HMONG TEXT"
+        android:id="@+id/different"
+        android:text="DIFFERENT TEXT"
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="30sp"/>
