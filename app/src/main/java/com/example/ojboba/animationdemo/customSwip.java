@@ -13,11 +13,16 @@ import android.widget.Toast;
  * Created by Torab on 20-May-16.
  */
 public class customSwip extends PagerAdapter {
-    private int [] imageResources ={R.drawable.capture1,R.drawable.capture2,R.drawable.capture3,R.drawable.capture4,R.drawable.capture5};
-    private String[] imageText = {"one", "two", "three", "four", "five"};
-    private String[] imageDifferent = {"61236", "612361", "612361", "612361", "612361"};
+    YourPojo yourPojo;
+    private int [] imageResourcess = yourPojo.imageResources;
+//    private String[] imageText = {"one", "two", "three", "four", "five"};
+//    private String[] imageDifferent = {"61236", "612361", "612361", "612361", "612361"};
     private Context ctx;
     private LayoutInflater layoutInflater;
+
+//    public customSwip(FragmentManager fm) {
+//        super(fm);
+//    }
 
     public customSwip(Context c) {
         ctx=c;
@@ -25,8 +30,13 @@ public class customSwip extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return imageResources.length;
+        return imageResourcess.length;
     }
+
+//    @Override
+//    public Fragment getItem(int position) {
+//        return null;
+//    }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
@@ -35,10 +45,10 @@ public class customSwip extends PagerAdapter {
         ImageView imageView=(ImageView) itemView.findViewById(R.id.swip_image_view);
         TextView textHmong=(TextView) itemView.findViewById(R.id.different);
         TextView textEnglish=(TextView) itemView.findViewById(R.id.english);
-        imageView.setImageResource(imageResources[position]);
-        final String dummytext = imageText[position];
-        textHmong.setText(imageDifferent[position]);
-        textEnglish.setText(imageText[position]);
+        imageView.setImageResource(yourPojo.imageResources[position]);
+        final String dummytext = yourPojo.imageText[position];
+        textHmong.setText(yourPojo.imageDifferent[position]);
+        textEnglish.setText(yourPojo.imageText[position]);
         container.addView(itemView);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override

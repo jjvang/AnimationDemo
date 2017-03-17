@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
+YourPojo yourPojo;
     ViewPager viewPager;
     customSwip  customSwip;
     @Override
@@ -24,9 +24,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // SOMEHOW PASS THESE DATA TO customSWIP to set new values
-                int [] imageResources ={R.drawable.capture1,R.drawable.capture2,R.drawable.capture3,R.drawable.capture4,R.drawable.capture5};
-                String[] imageText = {"new", "two", "three", "four", "five"};
-                String[] imageHmong = {"new", "new", "new", "new", "new"};
+                int [] imageResources2 ={R.drawable.capture2,R.drawable.capture2,R.drawable.capture5,R.drawable.capture2,R.drawable.capture2};
+                yourPojo.imageResources = imageResources2;
+                String[] imageText2 = {"new", "two", "three", "four", "five"};
+                yourPojo.imageText = imageText2;
+                String[] imageHmong2 = {"new", "new", "new", "new", "new"};
+                yourPojo.imageDifferent = imageHmong2;
+
+                viewPager.setAdapter(customSwip);
             }
         });
 
