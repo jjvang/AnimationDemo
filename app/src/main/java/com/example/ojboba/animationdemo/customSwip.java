@@ -15,14 +15,9 @@ import android.widget.Toast;
 public class customSwip extends PagerAdapter {
     YourPojo yourPojo;
     private int [] imageResourcess = yourPojo.imageResources;
-//    private String[] imageText = {"one", "two", "three", "four", "five"};
-//    private String[] imageDifferent = {"61236", "612361", "612361", "612361", "612361"};
     private Context ctx;
     private LayoutInflater layoutInflater;
 
-//    public customSwip(FragmentManager fm) {
-//        super(fm);
-//    }
 
     public customSwip(Context c) {
         ctx=c;
@@ -32,11 +27,6 @@ public class customSwip extends PagerAdapter {
     public int getCount() {
         return imageResourcess.length;
     }
-
-//    @Override
-//    public Fragment getItem(int position) {
-//        return null;
-//    }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
